@@ -23,6 +23,7 @@
     "@cloudflare/workers-types": "^4.20240806.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^20",
+    "@types/react": "^19.0.10",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "dotenv-cli": "^7.4.2",
     "eslint": "^8",
