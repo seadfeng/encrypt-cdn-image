@@ -7,13 +7,13 @@ export default async function middleware(req: NextRequest) {
 
   if (!apiTokenHeader) {
     return new Response(JSON.stringify(
-      { error: "Unauthorized", message: 'Missing x-api-key header' }
-    ), { status: 400, headers: { 'Content-Type': 'text/plain' } });
+      { error: "Unauthorized", message: 'Missing x-api-key' }
+    ), { status: 400, headers: { 'Content-Type': 'text/json' } });
   }
   if (apiTokenHeader !== apiToken) {
     return new Response(JSON.stringify(
       { error: "Unauthorized", message: 'x-api-key not match' }
-    ), { status: 403, headers: { 'Content-Type': 'text/plain' } });
+    ), { status: 403, headers: { 'Content-Type': 'text/json' } });
   }
   return NextResponse.next();
 }
